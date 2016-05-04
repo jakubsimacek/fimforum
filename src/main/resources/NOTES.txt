@@ -1,0 +1,72 @@
+
+Rozvrzeni obrazovky:
+
+TTTTTTTTTTTTTTTTTTT
+FFFMMMMMMMMMMMMMMMM
+FFFMMMMMMMMMMMMMMMM
+FFFMMMMMMMMMMMMMMMM
+FFFMMMMMMMMMMMMMMMM
+FFFMMMMMMMMMMMMMMMM
+FFFMMMMMMMMMMMMMMMM
+
+T - titulek
+M - kontextove Menu
+F - seznam adresaru a for u zobrazeni zprav
+    seznam kategorii nastaveni
+M - hlavni plocha
+
+M:
+    Fóra
+    Nová složka
+    Nové fórum
+    Nastavení
+    Administrace
+        Uživatelé
+        Skupiny
+        Role
+        Složky
+        Fóra
+            Pridani/odebrani skupin moderatoru
+            Pridani/odebrani uzivatelu moderatoru
+            Pridani/odebrani skupin prispevatelu
+            Pridani/odebrani uzivatelu prispevatelu
+            Pridani/odebrani skupin ctenaru
+            Pridani/odebrani uzivatelu ctenaru
+            
+        Zálohování
+    Nápověda
+    Odhlásit
+
+Druhy uzivatelu:
+    supervisor - globalni funkce
+                 pridava, odebira, zakazuje a povoluje uzivatele, resetuje uzivatelska hesla. 
+                 Pridava a odebira skupiny a meni clenstvi v jakychkoliv skupinach
+                 meni nastaveni jakehkoliv fora
+                 automaticky je to vsak neopravnuje ke cteni/prispivani/moderovani ve forech.
+                 Priklad:   Jiri Novak, Marie Mejdrova, Petra Novakova
+                            Pridavaji nove uzivatele, zablokovavaji je, rozhoduji kdo co muze delat v dulezitych forech
+    moderator - per forum
+                pridava a odebira moderatory(*), prispevatele a ctenare
+                    * - Jen pokud je drzitelem role GRANT_MODERATOR, nemuze odebrat sam sebe, nebo je alespon varovan
+                muze mazat/editovat jakehkoliv prispevky
+                Priklad: Jiri Novak muze zalozit nove forum tykajici se nadchazejici akce. On 
+                Priklad: Tomas Havel muze zalozit nove forum ve slozce Vylety a pridat tam libovolnou skupinu jako prispevatele a ctenare.
+    prispevatel - per forum
+                Vklada prispevky, pripadne je jeste editovat
+    ctenar - pouze prohlizi
+Role:
+
+Slozky:
+    Vychozi nastaveni slozky:
+        - vychozi moderatori, prispevatele, ctenari
+        - max. doba, po kterou je povolena editace prispevku
+        - ACL:
+            kdo muze vytvorit podlozky
+            kdo muze menit ACL
+            kdo muze vytvaret fora
+            kdo muze upravovat fora (nad ramec toho, kdo si ho vytvoril) - krome supervisoru
+
+
+Admin funkce:
+    Odstranit - oznaci forum, uzivatele, skupinu jako smazanou a zneviditelni je (princip kose) - odstranit forum ci skupinu muze i vlastnik
+    Trvale odstranit - vysypat kos - muze pouze supervisor
