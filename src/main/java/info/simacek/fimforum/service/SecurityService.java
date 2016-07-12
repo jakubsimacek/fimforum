@@ -7,10 +7,10 @@ package info.simacek.fimforum.service;
 
 import info.simacek.fimforum.domain.Forum;
 import info.simacek.fimforum.domain.Group;
+import info.simacek.fimforum.domain.Member;
 import info.simacek.fimforum.domain.Message;
 import info.simacek.fimforum.domain.Questionnaire;
 import info.simacek.fimforum.domain.Role;
-import info.simacek.fimforum.domain.User;
 import java.util.List;
 
 /**
@@ -18,12 +18,12 @@ import java.util.List;
  * @author Jakub
  */
 public interface SecurityService {
-    void createUser(User user);
-    void updateUser(User user);
-    void disableUser(User user);
-    void enableUser(User user);
-    void deleteUser(User user);
-    List<User> getUsers();
+    void createUser(Member member);
+    void updateUser(Member member);
+    void disableUser(Member member);
+    void enableUser(Member member);
+    void deleteUser(Member member);
+    List<Member> getMembers();
     
     void createGroup(Group group);
     void updateGroup(Group group);
@@ -34,15 +34,15 @@ public interface SecurityService {
     void removeGroupFromGroup(Group parentGroup, Group group);
     List<Group> getGroupMebership(Group group);
     
-    void addUserToGroup(Group group, User user);
-    void removeUserFromGroup(Group group, User user);
+    void addUserToGroup(Group group, Member member);
+    void removeUserFromGroup(Group group, Member member);
     List<Group> getUserMebership(Group group);
     
-    User checkUserCredentials(String userName, byte[] password);
+    Member checkUserCredentials(String userName, byte[] password);
     
     // to be hidden
-    boolean checkUserSystemRole(User user, Role role);
-    boolean checkUserAuthorization(User user, Forum forum, Role role);
-    boolean checkUserAuthorization(User user, Message message, Role role);
-    boolean checkQuestionnaireAuthorization(User user, Questionnaire questionnaire);
+    boolean checkUserSystemRole(Member member, Role role);
+    boolean checkUserAuthorization(Member member, Forum forum, Role role);
+    boolean checkUserAuthorization(Member member, Message message, Role role);
+    boolean checkQuestionnaireAuthorization(Member member, Questionnaire questionnaire);
 }

@@ -6,9 +6,9 @@
 package info.simacek.fimforum.service;
 
 import info.simacek.fimforum.domain.Answer;
+import info.simacek.fimforum.domain.Member;
 import info.simacek.fimforum.domain.Question;
 import info.simacek.fimforum.domain.Questionnaire;
-import info.simacek.fimforum.domain.User;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -39,7 +39,7 @@ public interface QuestionnaireService {
     
     void saveAnswers(Answer answer, boolean areFinal);
     
-    Map<User, Answer> getAnswers(Questionnaire questionnaire);
+    Map<Member, Answer> getAnswers(Questionnaire questionnaire);
     Set<Answer> getAnonymousAnswers(Questionnaire questionnaire);
     //Map<Question, QuestionStat> getStatistics(Questionnaire questionnaire);
 }

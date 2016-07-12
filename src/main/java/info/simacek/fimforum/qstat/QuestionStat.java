@@ -5,10 +5,13 @@
  */
 package info.simacek.fimforum.qstat;
 
+import info.simacek.fimforum.domain.Question;
+
 /**
  *
  * @author Jakub
  */
 public class QuestionStat {
-    
+    Question question;
+    int answers;
 }
