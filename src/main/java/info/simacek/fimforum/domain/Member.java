@@ -14,7 +14,7 @@ import javax.persistence.Id;
  * @author Jakub
  */
 @Entity
-public class User {
+public class Member {
     @Id
     protected int id;
     protected String name;

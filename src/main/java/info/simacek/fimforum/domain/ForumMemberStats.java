@@ -12,10 +12,10 @@ import javax.persistence.Entity;
  * @author Jakub
  */
 @Entity
-public class ForumUserStats {
+public class ForumMemberStats {
     
     protected Forum forum;
-    protected User user;
+    protected Member member;
     //protected Date lastVisit;
     protected int lastMessageId;
 }

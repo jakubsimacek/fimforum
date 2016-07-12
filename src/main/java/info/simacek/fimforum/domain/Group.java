@@ -19,7 +19,7 @@ public class Group {
     protected int id;
     protected String name;
     protected Set<Group> groupSet;
-    protected Set<User> userSet;
+    protected Set<Member> memberSet;
     protected Set<Role> roleSet;
     protected Set<Forum> forumAdminSet;
     protected Set<Forum> forumPublisherSet;

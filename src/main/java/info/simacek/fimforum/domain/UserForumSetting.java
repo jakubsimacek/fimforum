@@ -17,7 +17,7 @@ import javax.persistence.Id;
 public class UserForumSetting {
     @Id
     private int id; //to be replaced with a composite key
-    protected User user;
+    protected Member member;
     protected Set<Forum> forumSet;
     protected int maxInterval;
     protected int maxMessages;

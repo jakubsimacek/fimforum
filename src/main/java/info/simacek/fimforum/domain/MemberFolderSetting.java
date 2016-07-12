@@ -12,10 +12,10 @@ import javax.persistence.Id;
  *
  * @author Jakub
  */
-public class UserFolderSetting {
+public class MemberFolderSetting {
     @Id
     private int id; //to be replaced with a composite key
-    protected User user;
+    protected Member member;
     protected Set<Folder> folderSet;
     protected int maxInterval;
     protected int maxMessages;

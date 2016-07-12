@@ -18,8 +18,8 @@ public class Message {
     @Id
     protected int id;
     protected String text;
-    protected User createdBy;
-    protected User changedBy;
+    protected Member createdBy;
+    protected Member changedBy;
     protected Date created;
     protected Date changed;
     protected Message repliedTo;

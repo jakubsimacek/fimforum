@@ -22,7 +22,7 @@ public class Question {
     /**
      * Owner of this question
      */
-    private User owner;
+    private Member owner;
     
     private Date createdOn;
     

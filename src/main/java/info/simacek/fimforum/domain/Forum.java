@@ -21,8 +21,8 @@ public class Forum {
     protected int id;
     protected String name;
     protected Folder folder;
-    protected User createdBy;
-    protected User changedBy;
+    protected Member createdBy;
+    protected Member changedBy;
     protected String description;
     protected Date created;
     protected Date changed;
